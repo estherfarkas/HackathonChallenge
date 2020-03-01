@@ -1,0 +1,71 @@
+!DOCTYPE html>
+
+<html class="no-js" prefix="og: http://ogp.me/ns#">
+<style>
+    body{
+        background-color: lightslategray;
+    }
+    .button { 
+        background-color: #ccffcc;
+        color: black;
+        margin: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        width: 130px;
+        
+    }
+    .button:active {
+        background-color: cadetblue;
+    }
+    input, p{
+        margin: 10px 30px;
+        width: 130px;
+    }
+    .myForm
+    {
+        visibility: hidden;
+    }
+    .myForm:active
+    {
+        visibility: visible;
+    }
+</style>
+
+<head>
+    <title> Hackathon</title>
+</head>
+<body>
+    <div class="contact">
+        <div>
+            <a href="mailto:someone@example.com?Subject=Hello%20again"><button type="button" id="EmailUs"class="button">Email Us</button></a> 
+        </div>
+        <div>
+            <button type="button" id="chat" class="button">Chat Box</button>
+            <div class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <label for="msg"><b>Message</b></label>
+                  <textarea placeholder="Type message.." name="msg" required></textarea>
+                  <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <button type="button" id="ScreenShare" class="button">Screen Share</button>
+        </div>
+        <div>
+            <a href="https://www.skype.com/en/"><button type="button" id="Skype" class="button">Skype</button></a>
+        </div>
+        <div id="CallOrText">
+            <p>To call or text input your number:</p>
+            <div><input type="text" class="number" id="number"></input></div>
+            <div><a href="www.madeupwecite.com"><button type="button" id="Text" class="button">Text</button></a></div>
+            <div><button type="button" id="Call" class="button">Call</button></div>
+        </div>
+    </div>
+    
+</body>
+<script src="https://media.twiliocdn.com/sdk/js/chat/v3.3/twilio-chat.min.js"></script>
+<script src="Appp.js"></script>
+</html>

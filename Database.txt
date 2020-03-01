@@ -1,0 +1,29 @@
+import java.sql.*;
+public class TextSelect
+{
+
+  public static void main(String[] args)
+  {
+    try
+    {
+      String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+      String url = "jdbc:sqlserver://DESKTOP-FG7N4PF//SQLEXPRESS:1433;database=343library;integratedSecurity=true";
+     
+      Class.forName(driver);
+     
+      Connection conn = DriverManager.getConnection(url);
+     
+      String query = "SELECT PhoneNumber FROM UserProfile";
+
+      Statement st = conn.createStatement();
+     
+      ResultSet phoneNumber = st.executeQuery(query);
+   
+      st.close();
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
+  }
+}
